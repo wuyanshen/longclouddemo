@@ -1,0 +1,21 @@
+server:
+  port: 8085
+
+spring:
+  application:
+    name: gateway
+  profiles:
+    active: dev
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8841,localhost:8842,localhost:8843
+    config:
+      name: ${spring.application.name}
+      profile: ${spring.profiles.active}
+      uri: http://localhost:8090
+
+
+
+
+

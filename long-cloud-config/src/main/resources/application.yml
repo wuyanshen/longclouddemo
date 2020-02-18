@@ -1,0 +1,20 @@
+server:
+  port: 8090
+spring:
+  application:
+    name: config
+  profiles:
+    active: native
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8841,localhost:8842,localhost:8843
+    config:
+      server:
+        native:
+          search-locations: classpath:/config
+        git:
+          uri:
+          username:
+          password:
+          search-paths:
