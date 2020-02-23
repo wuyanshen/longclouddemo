@@ -7,5 +7,17 @@ package longyi.cloud.longcloudcommon;
  */
 public interface CommonConstants {
 
-    public static String AUTH_SERVICE_NAME = "auth";
+    String AUTH_SERVICE_NAME = "auth";
+
+    /**
+     * 描述
+     */
+    Integer SUCCESS = 0;
+
+    /**
+     * 描述
+     */
+    Integer FAIL = 1;
+
+    String GATEWAY_ROUTE_KEY = "GATEWAY_ROUTE_KEY";
 }

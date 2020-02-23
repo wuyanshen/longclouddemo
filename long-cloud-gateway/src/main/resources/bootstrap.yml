@@ -9,13 +9,32 @@ spring:
   cloud:
     nacos:
       discovery:
-        server-addr: localhost:8841,localhost:8842,localhost:8843
-    config:
-      name: ${spring.application.name}
-      profile: ${spring.profiles.active}
-      uri: http://localhost:8090
-
-
-
-
-
+        server-addr: localhost:8841
+      config:
+        server-addr: localhost:8841
+        file-extension: yml
+        ext-config:
+          - dataId: application.yml
+            group: DEFAULT_GROUP
+            refresh: false
+          - dataId: log.yml
+            group: DEFAULT_GROUP
+            refresh: true
+        shared-dataids: application.yml,log.yml
+        refreshable-dataids: application.yml,log.yml
+        namespace: a944391b-e881-4520-9f2f-a05eaf267a9d
+#        group: TEST_GROUP
+#    config:
+#      name: ${spring.application.name}
+#      profile: ${spring.profiles.active}
+#      uri: http://localhost:8090
+#
+#
+#management:
+#  endpoints:
+#    web:
+#      exposure:
+#        include: '*'
+#  endpoint:
+#    shutdown:
+#      enabled: true

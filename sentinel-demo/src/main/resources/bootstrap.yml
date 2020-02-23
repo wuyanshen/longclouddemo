@@ -1,0 +1,27 @@
+server:
+  port: 8811
+
+spring:
+  application:
+    name: sentinel-demo
+  cloud:
+    sentinel:
+      transport:
+        dashboard: localhost:10000
+      datasource:
+        ds1:
+          file:
+            file: classpath:flowrule.json
+            data-type: json
+            rule-type: flow
+        ds2:
+          nacos:
+            server-addr: localhost:8841
+            dataId: sentinel-demo
+            groupId: DEFAULT_GROUP
+            data-type: json
+            rule-type: flow
+    nacos:
+      discovery:
+        server-addr: localhost:8841
+

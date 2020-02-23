@@ -7,6 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class LongCloudAuthApplication {
 
     public static void main(String[] args) {
+        System.setProperty("spring.profiles.active","server1");
         SpringApplication.run(LongCloudAuthApplication.class, args);
     }
 

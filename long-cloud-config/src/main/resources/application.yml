@@ -3,8 +3,8 @@ server:
 spring:
   application:
     name: config
-  profiles:
-    active: native
+#  profiles:
+#    active: native
   cloud:
     nacos:
       discovery:
@@ -14,7 +14,7 @@ spring:
         native:
           search-locations: classpath:/config
         git:
-          uri:
-          username:
-          password:
-          search-paths:
+          uri: https://gitee.com/wuyanshen/longclouddemo.git
+          username: 763010522@qq.com
+          password: 225010wu
+          search-paths: config

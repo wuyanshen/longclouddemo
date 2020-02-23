@@ -6,15 +6,16 @@
 
     <groupId>longyi.cloud</groupId>
     <artifactId>longclouddemo</artifactId>
+    <packaging>pom</packaging>
     <version>1.0</version>
 
     <properties>
         <java.version>1.8</java.version>
         <maven.compiler.target>1.8</maven.compiler.target>
         <maven.compiler.source>1.8</maven.compiler.source>
-        <spring-cloud.version>Hoxton.RELEASE</spring-cloud.version>
-        <spring-boot.version>2.2.2.RELEASE</spring-boot.version>
-        <nacos.version>0.2.2.RELEASE</nacos.version>
+        <spring-cloud.version>Greenwich.SR3</spring-cloud.version>
+        <spring-boot.version>2.1.10.RELEASE</spring-boot.version>
+        <spring-alibaba.version>2.1.1.RELEASE</spring-alibaba.version>
     </properties>
 
     <modules>
@@ -23,6 +24,14 @@
         <module>long-cloud-gateway</module>
         <module>long-cloud-config</module>
         <module>long-cloud-common</module>
+        <module>long-cloud-zuul</module>
+        <module>long-cloud-gateway-v2</module>
+        <module>long-cloud-monitor</module>
+        <module>long-cloud-nacos</module>
+        <module>long-cloud-nacos-dep</module>
+        <module>long-cloud-sentinel1.7.0</module>
+        <module>long-cloud-sentinel1.7.1</module>
+        <module>sentinel-demo</module>
     </modules>
 
     <dependencies>
@@ -44,14 +53,14 @@
 <!--            <dependency>-->
 <!--                <groupId>org.springframework.cloud</groupId>-->
 <!--                <artifactId>spring-cloud-alibaba-dependencies</artifactId>-->
-<!--                <version>${nacos.version}</version>-->
+<!--                <version>${alibaba.version}</version>-->
 <!--                <type>pom</type>-->
 <!--                <scope>import</scope>-->
 <!--            </dependency>-->
             <dependency>
                 <groupId>com.alibaba.cloud</groupId>
                 <artifactId>spring-cloud-alibaba-dependencies</artifactId>
-                <version>2.1.0.RELEASE</version>
+                <version>${spring-alibaba.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>

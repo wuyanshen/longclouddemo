@@ -1,0 +1,11 @@
+server:
+  port: 9999
+spring:
+  application:
+    name: monitor
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8841
+
+
