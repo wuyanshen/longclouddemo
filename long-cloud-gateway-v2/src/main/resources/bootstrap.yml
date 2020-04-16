@@ -25,6 +25,11 @@ spring:
             - Path=/service-auth/**
           filters:
             - StripPrefix=1
+            - name: RequestRateLimiter
+              args:
+                key-resolver: '#{@myKeyResolver}'
+                redis-rate-limiter.replenishRate: 2
+                redis-rate-limiter.burstCapacity: 4
 
         - id: query_route_2163
           uri: http://163.com
@@ -48,7 +53,6 @@ spring:
           response-status: 426
           response-body: sentinel 服务降级
   redis:
-    database: 0
     port: 6379
     host: localhost
 
